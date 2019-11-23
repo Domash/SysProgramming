@@ -14,7 +14,7 @@ HANDLE mutex = NULL;
 
 int LIMIT = 1000;
 
-#define GENERATE_DRAW_FUNCTION(name, brush)                                                                       \
+#define GENERATE_DRAW_FUNCTION(name, brush)                     \
     DWORD WINAPI draw_func_##name(LPVOID lpParam) {             \
         while(LIMIT > 0) {                                      \
             DWORD res = WaitForSingleObject(mutex, INFINITE);   \
