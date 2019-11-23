@@ -12,7 +12,7 @@
 HWND hWND = NULL;
 HANDLE mutex = NULL;
 
-int LIMIT = 1000;
+int LIMIT = 5000;
 
 #define GENERATE_DRAW_FUNCTION(name, brush)                     \
     DWORD WINAPI draw_func_##name(LPVOID lpParam) {             \
