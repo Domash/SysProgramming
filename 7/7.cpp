@@ -4,9 +4,6 @@
 #endif
 
 #include <Windows.h>
-#include <TlHelp32.h>
-
-#include <iostream>
 
 #ifdef UNICODE_WAS_UNDEFINED
 #undef UNICODE
@@ -62,11 +59,6 @@ LRESULT CALLBACK WndProc(
             threads[0] = CreateThread(NULL, NULL, draw_func_R, NULL, NULL, NULL);
             threads[1] = CreateThread(NULL, NULL, draw_func_G, NULL, NULL, NULL);
             threads[2] = CreateThread(NULL, NULL, draw_func_B, NULL, NULL, NULL);
-
-            break;
-        }
-
-        case WM_COMMAND: {
 
             break;
         }
